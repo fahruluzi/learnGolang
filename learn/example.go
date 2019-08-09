@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 // Variabel - Tipe Data : String
@@ -17,6 +18,9 @@ var namaLengkap = namaDepan + " " + namaBelakang
 // Variabel - Tipe Data : Numerik = [Integer,Float]
 var umur = 75
 var jumlah int
+
+// Variabel const (Data yang tidak bisa dirubah)
+const gaji = 500000
 
 func main() {
 	// penulisan singkat variabel hanya bisa dipakai didalam fungsi
@@ -36,4 +40,11 @@ func main() {
 	jumlah = angkaPertama + angkaKedua
 
 	fmt.Println("Total ", jumlah)
+
+	// gaji = 10 (Error)
+	fmt.Println("Gaji Pasti ", gaji)
+
+	// convert numerik kepada string (cek dokumentasi tentang strconv) -- Itoa
+	gajiString := strconv.Itoa(gaji) // kebalikannya Atoi
+	fmt.Println("Gaji Pasti " + gajiString)
 }
